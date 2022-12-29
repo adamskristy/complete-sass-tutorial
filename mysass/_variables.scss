@@ -1,10 +1,38 @@
 // named with underscore to tell to not watch and compile this file since only holds variables
 
 //theme colors
-$primary: #326dee;
-$secondary: #1ac888;
-$error: #d32752;
-$info: #f6c31c;
+$primary: #bc8f8f; //randomly found this color and I love it!
+$secondary: #bca68f;
+$complimentary: #8fbcbc;
+$error: #bc8fa6;
+$info: #8fbc8f;
+
+// color palette map
+// key value pairs
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "complimentary": $complimentary,
+  "error": $error,
+  "info": $info,
+  "blue": #9898da,
+  "red": #ee9393,
+  "yellow": #d6d691,
+  "green": #94e89f,
+  "orange": #e2bd77,
+  "purple": #a17eb9,
+  "gray": #808080,
+  "black": black,
+  "white": white,
+);
+
+// //gets a value from map
+// @debug map-get($colors, "purple"); //output: #a17eb9
+// // does map have this value
+// @debug map-has-key($colors, "secondary"); //output: true
+// // map-remove - removes value from map
+// //add a value to the map
+// @debug map-merge($colors, ("pink": #ffc0cb));
 
 //spacing
 $base-padding: 0.75rem;
@@ -12,7 +40,7 @@ $base-margin: 0.75rem;
 
 //borders
 $base-border-thickness: 1px;
-$base-border-radius: 10px;
+$base-border-radius: 20px;
 
 // box-shadow
 $base-box-shadow: 1px, 3px, 5px rgba(0,0,0,0.1);
@@ -21,3 +49,5 @@ $base-box-shadow: 1px, 3px, 5px rgba(0,0,0,0.1);
 $base-font-size: 1rem;
 $font-size-sm: $base-font-size * 0.75;
 $font-size-lg: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 2;
+$font-size-xxl: $base-font-size * 3;

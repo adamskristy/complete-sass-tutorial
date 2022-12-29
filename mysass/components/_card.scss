@@ -1,12 +1,18 @@
+@use 'sass:math';
+//import math module to be able to use division
+//see .card border radius
+//base border radius / 4
+
 .card {
     display: block;
     padding: $base-padding;
     border: $base-border-thickness solid #ddd;
     box-shadow: $base-box-shadow;
+    border-radius: math.div($base-border-radius, 4);
 
     //nesting
     .card-title {
-        font-size: $base-font-size;
+        font-size: $font-size-lg;
         padding-bottom: $base-padding;
         font-weight: bold;
     }
@@ -20,3 +26,6 @@
     }
 }
 
+//helpful to post messages to terminal?
+@debug "testing";
+@debug math.div(10, 3);

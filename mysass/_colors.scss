@@ -1,0 +1,48 @@
+// looping through color map
+
+// loop through color map and gain access to key value pairs
+@each $key, $val in $colors {
+   //generate a class for each key value pair
+   // .text-primary...
+   .text-#{$key} {
+    color: $val
+   }
+
+   .bg-#{$key} {
+    background-color: $val;
+   }
+
+    // light variations
+        // for loop since were looping through already looped
+        //create 4 variations
+        // .text-primary-light-1 etc
+    @for $i from 1 through 4 {
+        .text-#{$key}-light-#{$i} {
+            //mix by percentage
+            color: mix(white, $val, $i * 10);
+        }
+    }
+
+    @for $i from 1 through 4 {
+        .bg-#{$key}-light-#{$i} {
+            //mix by percentage
+            background-color: mix(white, $val, $i * 10);
+        }
+    }
+
+    //dark variations
+    @for $i from 1 through 4 {
+        .text-#{$key}-dark-#{$i} {
+            //mix by percentage
+            color: mix(black, $val, $i * 10);
+        }
+    }
+
+    @for $i from 1 through 4 {
+        .bg-#{$key}-dark-#{$i} {
+            //mix by percentage
+            background-color: mix(black, $val, $i * 10);
+        }
+    }
+}
+
