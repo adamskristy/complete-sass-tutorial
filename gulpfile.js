@@ -5,8 +5,8 @@ const sass = require('gulp-sass')(require('sass'))
 
 //compiles sass into css
 function buildStyles() {
-    //path to source file
-    return src('index.scss')
+    //path to source file, use * to watch all files with .scss extension
+    return src('mysass/**/*.scss')
     //.pipe combines functions, the output of each function becomes input for next??
         .pipe(sass())
         //files will be compiled into this folder
@@ -16,7 +16,7 @@ function buildStyles() {
 //actively watch sass file and updates
 function watchStyles() {
     //watch array files [index.scss file], 2nd arg function to run when file changes
-    watch(['index.scss'], buildStyles)
+    watch(['mysass/**/*.scss'], buildStyles)
 }
 
 //series functions allows to export/run functions in order

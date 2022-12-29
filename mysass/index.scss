@@ -1,0 +1,23 @@
+/* 
+    Browsers do not understand sass so this file has to be compiled into a css file
+        can use live SASS compiler extenstion in VS Code
+        can use task runner Gulp (at time of video) Grunt? Webpack?
+
+*/
+
+//import partials -  way to split code into multiple files then import them later
+// order of import matters
+
+// variables and functions
+@import 'variables';
+
+// base and layout
+@import 'base';
+
+// colors
+
+// components  (buttons, card, navbar)
+@import 'components/card'
+
+// utility (margin, padding, opacity
+
